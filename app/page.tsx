@@ -73,7 +73,7 @@ export default function ContactCard() {
     linkedin: "www.linkedin.com/in/bermet-talasbek-kyzy-405a6192/",
     website: "seba.auca.kg",
     telegram: "t.me/Bermettalasbek",
-    email: "talasbek_b@auca.kg",
+    email: "Bermet.tk@gmail.com",
     phone: "+996 706 101 903",
     bio: {
       en: "I lead the strategic development of external engagement, partnerships, and projects to drive growth" +
@@ -193,7 +193,7 @@ END:VCARD`
     },
   ]
 
-  const hashtags = ["#AUCA", "#Bussiness School", "#Entrepreneurship", "#Kyrgyzstan",]
+  const hashtags = ["#AUCA", "#Business School", "#Entrepreneurship", "#Kyrgyzstan",]
 
   if (!mounted) return null
 
