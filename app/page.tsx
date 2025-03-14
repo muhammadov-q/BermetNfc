@@ -88,7 +88,7 @@ export default function ContactCard() {
 VERSION:3.0
 FN:${contactInfo.name[language]}
 TITLE:${contactInfo.title[language]}
-ORG:${contactInfo.company}
+ORG:${contactInfo.name[language]}
 EMAIL:${contactInfo.email}
 TEL:${contactInfo.phone}
 URL:${contactInfo.website}
