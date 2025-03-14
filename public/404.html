@@ -1,25 +1,153 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Digital Business Card</title>
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      const pathSegmentsToKeep = 1;
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Digital Business Card</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      const l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
-    </script>
-  </head>
-  <body>
-  </body>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      padding: 40px;
+      text-align: center;
+      transition: opacity 0.3s ease;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      background-color: #4f46e5;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+
+    .logo svg {
+      width: 40px;
+      height: 40px;
+      fill: white;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 16px;
+      color: #1f2937;
+    }
+
+    p {
+      color: #6b7280;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .redirect-message {
+      font-size: 14px;
+      color: #9ca3af;
+      margin-top: 24px;
+    }
+
+    .home-link {
+      display: inline-block;
+      background-color: #4f46e5;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background-color 0.2s;
+    }
+
+    .home-link:hover {
+      background-color: #4338ca;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #1f2937;
+        color: #f3f4f6;
+      }
+
+      .container {
+        background-color: #111827;
+      }
+
+      h1 {
+        color: #f3f4f6;
+      }
+
+      p {
+        color: #d1d5db;
+      }
+
+      .redirect-message {
+        color: #9ca3af;
+      }
+    }
+  </style>
+  <script type="text/javascript">
+    // Single Page Apps for GitHub Pages
+    // MIT License
+    // https://github.com/rafgraph/spa-github-pages
+    (function() {
+      // Show the error page for a brief moment before redirecting
+      setTimeout(function() {
+        document.getElementById('error-container').style.opacity = '0.5';
+
+        // After a short delay, perform the redirect
+        setTimeout(function() {
+          const pathSegmentsToKeep = 1;
+          const l = window.location;
+
+          l.replace(
+            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+            l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+            l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+            (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+            l.hash
+          );
+        }, 300);
+      }, 1500);
+    })();
+  </script>
+</head>
+<body>
+  <div id="error-container" class="container">
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+      </svg>
+    </div>
+    <h1>Page Not Found</h1>
+    <p>The page you're looking for doesn't exist or has been moved.</p>
+    <a href="/" class="home-link">Go to Homepage</a>
+    <p class="redirect-message">Redirecting you automatically...</p>
+
+    <noscript>
+      <p style="margin-top: 20px; padding: 10px; background-color: #ffe8e8; color: #e53e3e; border-radius: 6px;">
+        JavaScript is required for this site to function properly. Please enable JavaScript or use a compatible browser.
+      </p>
+    </noscript>
+  </div>
+</body>
 </html>
-

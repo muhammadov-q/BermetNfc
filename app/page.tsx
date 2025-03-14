@@ -289,7 +289,7 @@ END:VCARD`
                   className="mb-4 md:mb-0 md:mr-6"
               >
                 <Image
-                    src="https://bermet.kobiljon.com/profile.png"
+                    src="https://bermet.kobiljon.com/profile.PNG"
                     alt={contactInfo.name[language]}
                     width={120}
                     height={120}
