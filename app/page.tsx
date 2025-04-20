@@ -20,6 +20,7 @@ import {
   ArrowUpRight,
   QrCode,
   X,
+  Instagram
 } from "lucide-react"
 import { toast, Toaster } from "react-hot-toast"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
@@ -72,6 +73,7 @@ export default function ContactCard() {
     },
     linkedin: "www.linkedin.com/in/bermet-talasbek-kyzy-405a6192/",
     website: "seba.auca.kg",
+    instagram: "www.instagram.com/bermettalasbek?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     telegram: "t.me/Bermettalasbek",
     email: "Bermet.tk@gmail.com",
     phone: "+996 706 101 903",
@@ -92,6 +94,7 @@ ORG:${contactInfo.name[language]}
 EMAIL:${contactInfo.email}
 TEL:${contactInfo.phone}
 URL:${contactInfo.website}
+INSTANTGRAM:${contactInfo.instagram}
 END:VCARD`
 
     const blob = new Blob([vcard], { type: "text/vcard" })
@@ -141,6 +144,9 @@ END:VCARD`
       case "website":
         data = `https://${contactInfo.website}`
         break
+      case "instagram":
+        data = `https://${contactInfo.instagram}`
+        break
       case "telegram":
         data = `${contactInfo.telegram}`
         break
@@ -155,6 +161,12 @@ END:VCARD`
   }, [selectedInfo, generateQRCodeData]) // Added generateQRCodeData to dependencies
 
   const contactLinks = [
+      {
+      icon: Instagram,
+      label: { en: "Instagram", ru: "Инстаграм" },
+      value: "@bermettalasbek",
+      href: `https://${contactInfo.instagram}`,
+    },
       {
       icon: Mail,
       label: { en: "Email", ru: "Почта" },
